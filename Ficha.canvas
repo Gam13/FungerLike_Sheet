@@ -1,0 +1,28 @@
+{
+	"nodes":[
+		{"id":"8bc8ae48a6012a2e","type":"text","text":"Status","x":220,"y":-170,"width":250,"height":180},
+		{"id":"d470af4f6c671ddf","type":"text","text":"Saúde","x":220,"y":-115,"width":250,"height":60},
+		{"id":"3d7b6de9c5b2ad6d","type":"text","text":"Sanidade","x":220,"y":-50,"width":250,"height":60},
+		{"id":"6bf901c72d1d1040","type":"text","text":"Equipamentos","x":220,"y":30,"width":250,"height":480},
+		{"id":"10bc38ac08abb913","type":"text","text":"Torso","x":220,"y":240,"width":250,"height":60},
+		{"id":"f1f2fb938faa1824","type":"text","text":"Acessório","x":220,"y":330,"width":250,"height":60},
+		{"id":"6439d23b4b329408","type":"text","text":"Acessório","x":220,"y":390,"width":250,"height":60},
+		{"id":"adc56c9e5c5bbbdf","type":"text","text":"Acessório","x":220,"y":450,"width":250,"height":60},
+		{"id":"8e5eb1c63a4ee50f","type":"text","text":"Arma","x":220,"y":100,"width":250,"height":60},
+		{"id":"351cccc2e669032e","type":"text","text":"Cabeça","x":220,"y":180,"width":250,"height":60},
+		{"id":"1eb6844332b940de","type":"text","text":"Sobreviventes","x":-200,"y":190,"width":365,"height":320},
+		{"id":"2d78139e94047dc8","type":"text","text":"Constituição","x":-177,"y":260,"width":160,"height":60},
+		{"id":"1a099132f3e4677f","type":"text","text":"Poder Mental","x":-177,"y":350,"width":160,"height":60},
+		{"id":"65c282d9e7cf6d83","type":"text","text":"Percepção","x":-177,"y":440,"width":160,"height":60},
+		{"id":"3fed4d2c6f6c0bc9","type":"text","text":"Combativas","x":-200,"y":-170,"width":365,"height":340},
+		{"id":"ec54d2219d73b49c","type":"text","text":"Força","x":-177,"y":-90,"width":160,"height":60},
+		{"id":"4e6716587edba4e4","type":"text","text":"Destreza","x":-177,"y":0,"width":160,"height":60},
+		{"id":"41c87d6aed786eac","type":"text","text":"Inteligência","x":-177,"y":90,"width":160,"height":60},
+		{"id":"5b5b2f9529134287","type":"text","text":"Nome:","x":-200,"y":-250,"width":670,"height":60},
+		{"id":"6eee86d8bf0edcc5","type":"text","text":"Macros","x":520,"y":-250,"width":250,"height":760},
+		{"id":"43cdb1bb7fd1cdd9","type":"text","text":"Speed","x":20,"y":35,"width":120,"height":115},
+		{"id":"c14f937081d4c787","type":"text","text":"Armor","x":20,"y":260,"width":120,"height":115},
+		{"id":"df462346d799eefa","type":"text","text":"Desafio","x":20,"y":-90,"width":120,"height":115}
+	],
+	"edges":[]
+}

@@ -1,0 +1,543 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxjal2nhalyr6"]
+
+[ext_resource type="Texture2D" uid="uid://cgxhdl20fqopu" path="res://Textures/diceIcon.png" id="1_v2hyf"]
+
+[node name="Ficha" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.580392, 0.564706, 0.415686, 1)
+
+[node name="Nome" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = -563.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="ColorRect/Nome"]
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="ColorRect/Nome/PanelContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+placeholder_text = "Nome"
+
+[node name="Status" type="PanelContainer" parent="ColorRect"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 214.0
+offset_right = -756.0
+offset_bottom = -45.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Status"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Combativas" type="PanelContainer" parent="ColorRect/Status/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+
+[node name="Numeros" type="MarginContainer" parent="ColorRect/Status/VBoxContainer/Combativas"]
+layout_mode = 2
+theme_override_constants/margin_left = 215
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Status/VBoxContainer/Combativas/Numeros"]
+custom_minimum_size = Vector2(0, 45)
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="for" type="TextEdit" parent="ColorRect/Status/VBoxContainer/Combativas/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="dex" type="TextEdit" parent="ColorRect/Status/VBoxContainer/Combativas/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="int" type="TextEdit" parent="ColorRect/Status/VBoxContainer/Combativas/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="Nomes" type="MarginContainer" parent="ColorRect/Status/VBoxContainer/Combativas"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 155
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Status/VBoxContainer/Combativas/Nomes"]
+custom_minimum_size = Vector2(0, 60)
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = -80
+alignment = 1
+
+[node name="Inteligência" type="Label" parent="ColorRect/Status/VBoxContainer/Combativas/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "inteligência"
+horizontal_alignment = 1
+
+[node name="Destreza" type="Label" parent="ColorRect/Status/VBoxContainer/Combativas/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Destreza"
+horizontal_alignment = 1
+
+[node name="Forca" type="Label" parent="ColorRect/Status/VBoxContainer/Combativas/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Força"
+horizontal_alignment = 1
+
+[node name="Sobreviventes" type="PanelContainer" parent="ColorRect/Status/VBoxContainer"]
+layout_mode = 2
+
+[node name="Numeros" type="MarginContainer" parent="ColorRect/Status/VBoxContainer/Sobreviventes"]
+layout_mode = 2
+theme_override_constants/margin_left = 215
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Status/VBoxContainer/Sobreviventes/Numeros"]
+custom_minimum_size = Vector2(0, 45)
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="con" type="TextEdit" parent="ColorRect/Status/VBoxContainer/Sobreviventes/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="pod" type="TextEdit" parent="ColorRect/Status/VBoxContainer/Sobreviventes/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="per" type="TextEdit" parent="ColorRect/Status/VBoxContainer/Sobreviventes/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="Nomes" type="MarginContainer" parent="ColorRect/Status/VBoxContainer/Sobreviventes"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 155
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Status/VBoxContainer/Sobreviventes/Nomes"]
+custom_minimum_size = Vector2(0, 60)
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = -80
+alignment = 1
+
+[node name="Percepção" type="Label" parent="ColorRect/Status/VBoxContainer/Sobreviventes/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Percepção"
+horizontal_alignment = 1
+
+[node name="Poder Metal" type="Label" parent="ColorRect/Status/VBoxContainer/Sobreviventes/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Poder Metal"
+horizontal_alignment = 1
+
+[node name="Constituição" type="Label" parent="ColorRect/Status/VBoxContainer/Sobreviventes/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Constituição"
+horizontal_alignment = 1
+
+[node name="Condição" type="PanelContainer" parent="ColorRect"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 414.0
+offset_top = 79.0
+offset_right = -369.0
+offset_bottom = -46.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Condição"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="Status" type="PanelContainer" parent="ColorRect/Condição/VBoxContainer"]
+layout_mode = 2
+
+[node name="Numeros" type="MarginContainer" parent="ColorRect/Condição/VBoxContainer/Status"]
+layout_mode = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+theme_override_constants/margin_left = 265
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Condição/VBoxContainer/Status/Numeros"]
+custom_minimum_size = Vector2(0, 45)
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="blood" type="TextEdit" parent="ColorRect/Condição/VBoxContainer/Status/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+mouse_filter = 1
+
+[node name="sanity" type="TextEdit" parent="ColorRect/Condição/VBoxContainer/Status/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Nomes" type="MarginContainer" parent="ColorRect/Condição/VBoxContainer/Status"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 155
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Condição/VBoxContainer/Status/Nomes"]
+custom_minimum_size = Vector2(0, 60)
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = -80
+alignment = 1
+
+[node name="Sanidade" type="Label" parent="ColorRect/Condição/VBoxContainer/Status/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Sanidade"
+horizontal_alignment = 1
+
+[node name="Sangue" type="Label" parent="ColorRect/Condição/VBoxContainer/Status/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Sangue"
+horizontal_alignment = 1
+
+[node name="maxvalue" type="MarginContainer" parent="ColorRect/Condição/VBoxContainer/Status"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = -85
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/Condição/VBoxContainer/Status/maxvalue"]
+custom_minimum_size = Vector2(0, 45)
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Sanidade" type="Label" parent="ColorRect/Condição/VBoxContainer/Status/maxvalue/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "0"
+horizontal_alignment = 1
+
+[node name="Sanidade2" type="Label" parent="ColorRect/Condição/VBoxContainer/Status/maxvalue/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "0"
+horizontal_alignment = 1
+
+[node name="Equipamentos" type="PanelContainer" parent="ColorRect/Condição/VBoxContainer"]
+layout_mode = 2
+
+[node name="Numeros" type="MarginContainer" parent="ColorRect/Condição/VBoxContainer/Equipamentos"]
+layout_mode = 2
+theme_override_constants/margin_left = 215
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Numeros"]
+custom_minimum_size = Vector2(0, 45)
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="OptionButton2" type="OptionButton" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="OptionButton3" type="OptionButton" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="OptionButton4" type="OptionButton" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="OptionButton5" type="OptionButton" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="OptionButton6" type="OptionButton" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Numeros/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="Nomes" type="MarginContainer" parent="ColorRect/Condição/VBoxContainer/Equipamentos"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 155
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Nomes"]
+custom_minimum_size = Vector2(0, 60)
+layout_direction = 1
+layout_mode = 2
+theme_override_constants/separation = -80
+alignment = 1
+
+[node name="Percepção" type="Label" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Acessórios"
+horizontal_alignment = 1
+
+[node name="Poder Metal" type="Label" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Acessórios"
+horizontal_alignment = 1
+
+[node name="Cabeça" type="Label" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Acessórios"
+horizontal_alignment = 1
+
+[node name="Torso" type="Label" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Torso"
+horizontal_alignment = 1
+
+[node name="Cabeça2" type="Label" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Cabeça"
+horizontal_alignment = 1
+
+[node name="arma" type="Label" parent="ColorRect/Condição/VBoxContainer/Equipamentos/Nomes/VBoxContainer"]
+layout_mode = 2
+text = "Arma
+"
+horizontal_alignment = 1
+
+[node name="Modificadores" type="HBoxContainer" parent="ColorRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 80.0
+offset_right = 394.0
+offset_bottom = 200.0
+
+[node name="speed" type="PanelContainer" parent="ColorRect/Modificadores"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Modificadores/speed"]
+clip_contents = true
+layout_mode = 2
+
+[node name="Speed" type="Label" parent="ColorRect/Modificadores/speed/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Speed"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/Modificadores/speed/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Modificadores/speed/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="baseNum" type="TextEdit" parent="ColorRect/Modificadores/speed/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_direction = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "0"
+
+[node name="Final" type="Label" parent="ColorRect/Modificadores/speed/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "0
+"
+horizontal_alignment = 1
+
+[node name="Armor" type="PanelContainer" parent="ColorRect/Modificadores"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Modificadores/Armor"]
+clip_contents = true
+layout_mode = 2
+
+[node name="armor" type="Label" parent="ColorRect/Modificadores/Armor/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Armor"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/Modificadores/Armor/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Modificadores/Armor/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="baseNum" type="TextEdit" parent="ColorRect/Modificadores/Armor/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_direction = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "0"
+
+[node name="Final" type="Label" parent="ColorRect/Modificadores/Armor/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "0
+"
+horizontal_alignment = 1
+
+[node name="Desafio" type="PanelContainer" parent="ColorRect/Modificadores"]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Modificadores/Desafio"]
+clip_contents = true
+layout_mode = 2
+
+[node name="desafio" type="Label" parent="ColorRect/Modificadores/Desafio/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Desafio"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/Modificadores/Desafio/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Modificadores/Desafio/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="baseNum" type="TextEdit" parent="ColorRect/Modificadores/Desafio/VBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_direction = 1
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "0"
+
+[node name="Final" type="Label" parent="ColorRect/Modificadores/Desafio/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "0
+"
+horizontal_alignment = 1
+
+[node name="Anotações" type="PanelContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 796.0
+offset_top = 78.0
+offset_right = -19.0
+offset_bottom = -44.0
+
+[node name="TextEdit" type="TextEdit" parent="ColorRect/Anotações"]
+layout_mode = 2
+
+[node name="buttonGroup" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="rollFor" type="TextureButton" parent="buttonGroup"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 224.0
+offset_right = 240.0
+offset_bottom = 266.0
+texture_normal = ExtResource("1_v2hyf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="rollDex" type="TextureButton" parent="buttonGroup"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 285.0
+offset_right = 240.0
+offset_bottom = 327.0
+texture_normal = ExtResource("1_v2hyf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="rollInt" type="TextureButton" parent="buttonGroup"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 345.0
+offset_right = 240.0
+offset_bottom = 387.0
+texture_normal = ExtResource("1_v2hyf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="rollCon" type="TextureButton" parent="buttonGroup"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 429.0
+offset_right = 240.0
+offset_bottom = 471.0
+texture_normal = ExtResource("1_v2hyf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="rollPod" type="TextureButton" parent="buttonGroup"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 490.0
+offset_right = 240.0
+offset_bottom = 532.0
+texture_normal = ExtResource("1_v2hyf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="rollPer" type="TextureButton" parent="buttonGroup"]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 550.0
+offset_right = 240.0
+offset_bottom = 592.0
+texture_normal = ExtResource("1_v2hyf")
+ignore_texture_size = true
+stretch_mode = 0

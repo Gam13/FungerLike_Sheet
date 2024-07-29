@@ -1,2 +1,3 @@
-# FungerLike_Sheet
-A dynamic Tabletop RPG Sheet inspired by Fear and Hunger
+#git
+Ficha Estilo Fear and Hunger com sistema para rolagens e macros
+[[Conceito de Inimigos/README|README]]
