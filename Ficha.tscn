@@ -139,68 +139,84 @@ layout_mode = 2
 
 [node name="Labels" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status"]
 layout_mode = 2
+size_flags_vertical = 4
 
 [node name="HPCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels"]
 custom_minimum_size = Vector2(0, 55)
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
+size_flags_vertical = 8
 
 [node name="health" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels/HPCenter"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Sangue"
 
 [node name="MindCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels"]
 custom_minimum_size = Vector2(0, 55)
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="mind" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels/MindCenter"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Mente"
 
 [node name="HungerCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels"]
 custom_minimum_size = Vector2(0, 55)
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="hunger" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels/HungerCenter"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Fome"
 
 [node name="Textfields" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status"]
 layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 1
 
-[node name="strenght" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
+[node name="heath" type="LineEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Textfields"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 placeholder_text = "30"
+alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
-scroll_fit_content_height = true
 
-[node name="dexterity" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
+[node name="mind" type="LineEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Textfields"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 placeholder_text = "30"
+alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
-scroll_fit_content_height = true
 
-[node name="hunger" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
+[node name="hunger" type="LineEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Textfields"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 placeholder_text = "30"
+alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
-scroll_fit_content_height = true
 
 [node name="MaxLabels" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status"]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 0
+size_flags_vertical = 4
 
 [node name="MaxHPCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/MaxLabels"]
 custom_minimum_size = Vector2(0, 55)
@@ -228,6 +244,7 @@ text = ": 30"
 custom_minimum_size = Vector2(0, 55)
 layout_mode = 2
 size_flags_horizontal = 0
+size_flags_vertical = 0
 
 [node name="maxFP" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/MaxLabels/MaxFPCenter2"]
 layout_mode = 2
@@ -318,61 +335,74 @@ text = "Poder"
 
 [node name="Textfields" type="VBoxContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="strenght" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
+[node name="strenght" type="LineEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 placeholder_text = "30"
+alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
-scroll_fit_content_height = true
 
-[node name="dexterity" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
+[node name="dexterity" type="LineEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 placeholder_text = "30"
+alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
-scroll_fit_content_height = true
 
-[node name="inteligence" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
+[node name="inteligence" type="LineEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 placeholder_text = "30"
+alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
-scroll_fit_content_height = true
 
-[node name="vitality" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
+[node name="vitality" type="LineEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 placeholder_text = "30"
+alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
-scroll_fit_content_height = true
 
-[node name="speed" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
+[node name="speed" type="LineEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 placeholder_text = "30"
+alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
-scroll_fit_content_height = true
 
-[node name="power" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
+[node name="power" type="LineEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(55, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 placeholder_text = "30"
+alignment = 2
 context_menu_enabled = false
 virtual_keyboard_enabled = false
-scroll_fit_content_height = true
 
 [node name="RollButtons" type="VBoxContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status"]
 custom_minimum_size = Vector2(0, 344)
