@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxjal2nhalyr6"]
 
 [ext_resource type="Texture2D" uid="uid://cgxhdl20fqopu" path="res://Textures/diceIcon.png" id="1_wdccf"]
-[ext_resource type="Texture2D" path="res://Textures/diceClickedIcon.png" id="2_2qge5"]
+[ext_resource type="Texture2D" uid="uid://b8visk1nppbeo" path="res://Textures/diceClickedIcon.png" id="2_2qge5"]
 
 [node name="Ficha" type="Control"]
 clip_contents = true
@@ -24,11 +24,14 @@ color = Color(0.238226, 0.211041, 0.5563, 1)
 [node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 2
 offset_right = 575.0
-offset_bottom = 484.0
+offset_bottom = 691.0
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="Margin"]
+layout_mode = 2
 
 [node name="leftHalfScreen" type="VBoxContainer" parent="Margin"]
 layout_mode = 2
@@ -40,364 +43,386 @@ placeholder_text = "Nome:"
 
 [node name="Statistics" type="HBoxContainer" parent="Margin/leftHalfScreen"]
 layout_mode = 2
+size_flags_horizontal = 4
 
-[node name="MarginStatus" type="MarginContainer" parent="Margin/leftHalfScreen/Statistics"]
-clip_contents = true
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 20
-
-[node name="Panel" type="Panel" parent="Margin/leftHalfScreen/Statistics/MarginStatus"]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 10
-
-[node name="Status" type="HBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer"]
-layout_mode = 2
-
-[node name="Labels" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status"]
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="strenghtCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="strenght" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels/strenghtCenter"]
-layout_mode = 2
-text = "Força"
-
-[node name="dexterityCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="dexterity" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels/dexterityCenter"]
-layout_mode = 2
-text = "Destreza"
-
-[node name="inteligenceCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="inteligence" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels/inteligenceCenter"]
-layout_mode = 2
-text = "Inteligência"
-
-[node name="vitalityCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="vitality" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels/vitalityCenter"]
-layout_mode = 2
-text = "Vitalidade"
-
-[node name="speedCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="speed" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels/speedCenter"]
-layout_mode = 2
-text = "Rapidez"
-
-[node name="powerCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="power" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Labels/powerCenter"]
-layout_mode = 2
-text = "Poder"
-
-[node name="Textfields" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status"]
-layout_mode = 2
-size_flags_vertical = 4
-
-[node name="strenght" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-placeholder_text = "30"
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-scroll_fit_content_height = true
-
-[node name="dexterity" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-placeholder_text = "30"
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-scroll_fit_content_height = true
-
-[node name="inteligence" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-placeholder_text = "30"
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-scroll_fit_content_height = true
-
-[node name="vitality" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-placeholder_text = "30"
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-scroll_fit_content_height = true
-
-[node name="speed" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-placeholder_text = "30"
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-scroll_fit_content_height = true
-
-[node name="power" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-placeholder_text = "30"
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-scroll_fit_content_height = true
-
-[node name="RollButtons" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status"]
-custom_minimum_size = Vector2(0, 344)
-layout_mode = 2
-size_flags_vertical = 8
-
-[node name="strenght" type="TextureButton" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/RollButtons"]
-custom_minimum_size = Vector2(55, 55)
-layout_mode = 2
-texture_normal = ExtResource("1_wdccf")
-texture_pressed = ExtResource("2_2qge5")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="dexterity" type="TextureButton" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/RollButtons"]
-custom_minimum_size = Vector2(55, 55)
-layout_mode = 2
-texture_normal = ExtResource("1_wdccf")
-texture_pressed = ExtResource("2_2qge5")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="inteligence" type="TextureButton" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/RollButtons"]
-custom_minimum_size = Vector2(55, 55)
-layout_mode = 2
-texture_normal = ExtResource("1_wdccf")
-texture_pressed = ExtResource("2_2qge5")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="vitality" type="TextureButton" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/RollButtons"]
-custom_minimum_size = Vector2(55, 55)
-layout_mode = 2
-texture_normal = ExtResource("1_wdccf")
-texture_pressed = ExtResource("2_2qge5")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="reflexo" type="TextureButton" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/RollButtons"]
-custom_minimum_size = Vector2(55, 55)
-layout_mode = 2
-texture_normal = ExtResource("1_wdccf")
-texture_pressed = ExtResource("2_2qge5")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="power" type="TextureButton" parent="Margin/leftHalfScreen/Statistics/MarginStatus/MarginContainer/Status/RollButtons"]
-custom_minimum_size = Vector2(55, 55)
-layout_mode = 2
-texture_normal = ExtResource("1_wdccf")
-texture_pressed = ExtResource("2_2qge5")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Statistics" type="MarginContainer" parent="Margin/leftHalfScreen/Statistics"]
-layout_mode = 2
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="Panel" type="Panel" parent="Margin/leftHalfScreen/Statistics/Statistics"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/Statistics"]
-custom_minimum_size = Vector2(248, 320)
-layout_mode = 2
-
-[node name="MarginStatus" type="MarginContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Margin/leftHalfScreen/Statistics"]
 layout_mode = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
 
-[node name="Panel" type="Panel" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus"]
+[node name="Panel" type="Panel" parent="Margin/leftHalfScreen/Statistics/MarginContainer"]
 layout_mode = 2
 
-[node name="Status" type="HBoxContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus"]
+[node name="Armorclass" type="HBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginContainer"]
 layout_mode = 2
 
-[node name="Labels" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status"]
-layout_mode = 2
-
-[node name="HPCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/Labels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="health" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/Labels/HPCenter"]
-layout_mode = 2
-text = "Sangue"
-
-[node name="MindCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/Labels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="mind" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/Labels/MindCenter"]
-layout_mode = 2
-text = "Mente"
-
-[node name="Textfields" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status"]
-layout_mode = 2
-
-[node name="strenght" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-placeholder_text = "30"
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-scroll_fit_content_height = true
-
-[node name="dexterity" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/Textfields"]
-custom_minimum_size = Vector2(70, 50)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-placeholder_text = "30"
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-scroll_fit_content_height = true
-
-[node name="MaxLabels" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-
-[node name="MaxHPCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/MaxLabels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="maxHP" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/MaxLabels/MaxHPCenter"]
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_font_sizes/font_size = 30
-text = ": 30"
-
-[node name="MaxSPCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/MaxLabels"]
-custom_minimum_size = Vector2(0, 55)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="maxSP" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginStatus/Status/MaxLabels/MaxSPCenter"]
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_font_sizes/font_size = 30
-text = ": 30"
-
-[node name="MarginContainer" type="MarginContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_right = 30
-
-[node name="Panel" type="Panel" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="Armorclass" type="HBoxContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="Labels" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass"]
+[node name="Labels" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass"]
 layout_mode = 2
 alignment = 1
 
-[node name="shieldCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/Labels"]
+[node name="shieldCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/Labels"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="shield" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/Labels/shieldCenter"]
+[node name="shield" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/Labels/shieldCenter"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Escudo: "
 
-[node name="dodgeCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/Labels"]
+[node name="dodgeCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/Labels"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="dodge" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/Labels/dodgeCenter"]
+[node name="dodge" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/Labels/dodgeCenter"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Esquiva: "
 
-[node name="actionsCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/Labels"]
+[node name="actionsCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/Labels"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="actions" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/Labels/actionsCenter"]
+[node name="actions" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/Labels/actionsCenter"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Ações: "
 
-[node name="values" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass"]
+[node name="values" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass"]
 layout_mode = 2
 alignment = 1
 
-[node name="shieldCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/values"]
+[node name="shieldCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/values"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="val" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/values/shieldCenter"]
+[node name="val" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/values/shieldCenter"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "0"
 
-[node name="dodgeCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/values"]
+[node name="dodgeCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/values"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="val" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/values/dodgeCenter"]
+[node name="val" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/values/dodgeCenter"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "7"
 
-[node name="actionsCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/values"]
+[node name="actionsCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/values"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="val" type="Label" parent="Margin/leftHalfScreen/Statistics/Statistics/VBoxContainer/MarginContainer/Armorclass/values/actionsCenter"]
+[node name="val" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginContainer/Armorclass/values/actionsCenter"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "1"
+
+[node name="MarginStatus" type="MarginContainer" parent="Margin/leftHalfScreen/Statistics"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+
+[node name="Panel" type="Panel" parent="Margin/leftHalfScreen/Statistics/MarginStatus"]
+layout_mode = 2
+
+[node name="Status" type="HBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus"]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status"]
+layout_mode = 2
+
+[node name="HPCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="health" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels/HPCenter"]
+layout_mode = 2
+text = "Sangue"
+
+[node name="MindCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="mind" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels/MindCenter"]
+layout_mode = 2
+text = "Mente"
+
+[node name="HungerCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="hunger" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Labels/HungerCenter"]
+layout_mode = 2
+text = "Fome"
+
+[node name="Textfields" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status"]
+layout_mode = 2
+
+[node name="strenght" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Textfields"]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "30"
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+
+[node name="dexterity" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Textfields"]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "30"
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+
+[node name="hunger" type="TextEdit" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/Textfields"]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "30"
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+
+[node name="MaxLabels" type="VBoxContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="MaxHPCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/MaxLabels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="maxHP" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/MaxLabels/MaxHPCenter"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = ": 30"
+
+[node name="MaxSPCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/MaxLabels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="maxSP" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/MaxLabels/MaxSPCenter"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = ": 30"
+
+[node name="MaxFPCenter2" type="CenterContainer" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/MaxLabels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="maxFP" type="Label" parent="Margin/leftHalfScreen/Statistics/MarginStatus/Status/MaxLabels/MaxFPCenter2"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = ": 30"
+
+[node name="Status_Equips" type="HBoxContainer" parent="Margin/leftHalfScreen"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginStatus" type="MarginContainer" parent="Margin/leftHalfScreen/Status_Equips"]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Status" type="HBoxContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer"]
+layout_mode = 2
+
+[node name="Labels" type="VBoxContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="strenghtCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="strenght" type="Label" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels/strenghtCenter"]
+layout_mode = 2
+text = "Força"
+
+[node name="dexterityCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="dexterity" type="Label" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels/dexterityCenter"]
+layout_mode = 2
+text = "Destreza"
+
+[node name="inteligenceCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="inteligence" type="Label" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels/inteligenceCenter"]
+layout_mode = 2
+text = "Inteligência"
+
+[node name="vitalityCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="vitality" type="Label" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels/vitalityCenter"]
+layout_mode = 2
+text = "Vitalidade"
+
+[node name="speedCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="speed" type="Label" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels/speedCenter"]
+layout_mode = 2
+text = "Rapidez"
+
+[node name="powerCenter" type="CenterContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="power" type="Label" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Labels/powerCenter"]
+layout_mode = 2
+text = "Poder"
+
+[node name="Textfields" type="VBoxContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="strenght" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "30"
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+
+[node name="dexterity" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "30"
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+
+[node name="inteligence" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "30"
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+
+[node name="vitality" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "30"
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+
+[node name="speed" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "30"
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+
+[node name="power" type="TextEdit" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/Textfields"]
+custom_minimum_size = Vector2(70, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+placeholder_text = "30"
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+
+[node name="RollButtons" type="VBoxContainer" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status"]
+custom_minimum_size = Vector2(0, 344)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="strenght" type="TextureButton" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/RollButtons"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture_normal = ExtResource("1_wdccf")
+texture_pressed = ExtResource("2_2qge5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="dexterity" type="TextureButton" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/RollButtons"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture_normal = ExtResource("1_wdccf")
+texture_pressed = ExtResource("2_2qge5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="inteligence" type="TextureButton" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/RollButtons"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture_normal = ExtResource("1_wdccf")
+texture_pressed = ExtResource("2_2qge5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="vitality" type="TextureButton" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/RollButtons"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture_normal = ExtResource("1_wdccf")
+texture_pressed = ExtResource("2_2qge5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="reflexo" type="TextureButton" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/RollButtons"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture_normal = ExtResource("1_wdccf")
+texture_pressed = ExtResource("2_2qge5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="power" type="TextureButton" parent="Margin/leftHalfScreen/Status_Equips/MarginStatus/MarginContainer/Status/RollButtons"]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+texture_normal = ExtResource("1_wdccf")
+texture_pressed = ExtResource("2_2qge5")
+ignore_texture_size = true
+stretch_mode = 0
