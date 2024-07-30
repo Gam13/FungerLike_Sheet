@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Ficha FungerLike"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/bg_color=Color(0.124984, 0.103298, 0.299957, 1)
 config/icon="res://icon.svg"
 
 [dotnet]
